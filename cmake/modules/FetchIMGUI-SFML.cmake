@@ -1,5 +1,7 @@
 include(FetchContent)
 
+set(DOWNLOAD_EXTRACT_TIMESTAMP true)
+
 set(IMGUI-SFML_VERSION 2.5)
 FetchContent_Declare (
 		imgui-sfml

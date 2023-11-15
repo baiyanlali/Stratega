@@ -4,14 +4,16 @@ macro(run_conan)
         message(
                 STATUS
                 "Downloading conan.cmake from https://github.com/conan-io/cmake-conan")
-        file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/0.17.0/conan.cmake"
+        file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/0.18.0/conan.cmake"
                 "${CMAKE_BINARY_DIR}/conan.cmake")
     endif ()
 
     include(${CMAKE_BINARY_DIR}/conan.cmake)
     
-    conan_add_remote(NAME bincrafters URL
-            https://api.bintray.com/conan/bincrafters/public-conan)
+#     conan_add_remote(NAME bincrafters URL
+        #     https://api.bintray.com/conan/bincrafters/public-conan)
+#     conan_add_remote(NAME bincrafters URL
+#             https://api.bintray.com/conan/bincrafters/public-conan)
 
     conan_cmake_run(
             #Uncomment if building for M1 Apple
